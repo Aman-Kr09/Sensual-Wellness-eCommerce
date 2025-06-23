@@ -43,7 +43,7 @@
 ├── cart.html                 # Cart page
 ├── account.html              # User profile
 ├── buzz-me-baby.html         # Category page
-├── butt-stuff.html
+├── butt-stuff.html           #category page
 ├── kinky-shit.html
 ├── diy-orgasms.html
 ├── whisper-clitoral-stimulator.html # Sample product
