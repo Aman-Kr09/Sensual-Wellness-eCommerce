@@ -18,12 +18,12 @@
     <input
       type="text"
       placeholder="Search for products..."
-      class="border rounded p-2 w-1/2"
+      class="border rounded-3xl p-2 w-1/2"
     />
 
     <!-- cart section -->
 <div class="relative inline-block text-left" x-data="{ open: false }">
-  <button @click="open = !open" class="px-4 py-2 bg-pink-300 text-white rounded hover:bg-pink-400">
+  <button @click="open = !open" class="px-4 py-2 bg-pink-300 text-white rounded-2xl hover:bg-pink-400">
     <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png" alt="Hamburger Icon" width="15" height="15">
   </button>
 
@@ -49,29 +49,30 @@
   <!-- Categories -->
   <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4">
   <!-- Buzz Me Baby -->
-  <a href="buzz-me-baby.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-xl hover:shadow-xl transition">
+  <a href="buzz-me-baby.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-3xl hover:shadow-xl transition">
     <span class="text-2xl mr-2">🔴</span>
     <span class="font-medium">Buzz Me Baby</span>
   </a>
 
   <!-- Butt Stuff -->
-  <a href="butt-stuff.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-xl hover:shadow-xl transition">
+  <a href="butt-stuff.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-3xl hover:shadow-xl transition">
     <span class="text-2xl mr-2">🍆</span>
     <span class="font-medium">Butt Stuff</span>
   </a>
 
   <!-- Kinky Sh*t -->
-  <a href="kinky-shit.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-xl hover:shadow-xl transition">
+  <a href="kinky-shit.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-3xl hover:shadow-xl transition">
     <span class="text-2xl mr-2">⛓️</span>
     <span class="font-medium">Kinky Sh*t</span>
   </a>
 
   <!-- DIY Orgasms -->
-  <a href="diy-orgasms.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-xl hover:shadow-xl transition">
+  <a href="diy-orgasms.html" class="flex items-center justify-center p-6 bg-white shadow-md rounded-3xl hover:shadow-xl transition">
     <span class="text-2xl mr-2">✊</span>
     <span class="font-medium">DIY Orgasms</span>
   </a>
 </div>
+
 
   <!-- Product Grid -->
   <div class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -199,6 +200,8 @@
 
   </div>
 
+<div class="h-4"></div>
+<div class="h-4"></div>
 
 
   <h2 class="text-3xl font-bold text-center text-pink-600 my-6">
@@ -208,30 +211,123 @@
 
 
   <!-- carousel -->
- 
-
-<div id="animation-carousel" class="relative w-full" data-carousel="static">
+<div class="flex justify-center gap-14">
+<div class="text-center text-3xl md:text-4xl font-extrabold tracking-tight text-pink-400 drop-shadow-sm">
+    <h2 class="text-lg font-semibold mb-2">🍃 Naughty by Nature</h2>
+<div id="animation-carousel" class="relative w-[384px]" data-carousel="static">
     <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-         <!-- Item 1 -->
+    <div class="relative h-[233px] overflow-hidden rounded-lg">
+        <!-- Item 1 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item>
-            <img src="./images/carousel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./images/car1.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item>
-            <img src="./images/carousel2.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./images/car2.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item="active">
-            <img src="./images/carousel3.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./images/car3.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
         <!-- Item 4 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item>
-            <img src="./images/carousel4.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./images/car4.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
         <!-- Item 5 -->
         <div class="hidden duration-200 ease-linear" data-carousel-item>
-            <img src="./images/carousel5.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="./images/car5.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+</div>
+
+<div class="text-center text-3xl md:text-4xl font-extrabold tracking-tight text-pink-400 drop-shadow-sm">
+    <h2 class="text-lg font-semibold mb-2">🖤 In the Mood</h2>
+<div id="animation-carousel" class="relative w-[384px]" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-[233px] overflow-hidden rounded-lg">
+        <!-- Item 1 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carouse1.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carouse2.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+            <img src="./images/carouse3.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carouse4.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carouse5.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+</div>
+
+<div class="text-center text-3xl md:text-4xl font-extrabold tracking-tight text-pink-400 drop-shadow-sm">
+    <h2 class="text-lg font-semibold mb-2">💦 Just the Tip</h2>
+<div id="animation-carousel" class="relative w-[384px]" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-[233px] overflow-hidden rounded-lg">
+        <!-- Item 1 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carousell1.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carousell2.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+            <img src="./images/carousell3.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carousell4.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <img src="./images/carousell5.png" class="absolute block w-[384px] h-[233px] object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" alt="...">
         </div>
     </div>
     <!-- Slider controls -->
@@ -253,8 +349,134 @@
     </button>
 </div>
 
+</div>
+
+</div>
 
 <!-- carousel ends -->
+
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+
+
+<!-- 3rd last section -->
+<section class="relative bg-pink-100 py-16 px-4 md:px-20 overflow-hidden">
+  <img src="./images/carousel5.png" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" />
+
+  <div class="relative z-10 text-center mb-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-pink-700">Your Kinky Closet’s Craving</h2>
+    <p class="text-lg md:text-xl text-pink-600 mt-4">Slip into something scandalous. Shop the trends making hearts (and beds) race.</p>
+    <a href="#">
+      <button class="mt-6 px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-semibold transition">
+        Tease Me Now
+      </button>
+    </a>
+  </div>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
+  <a href="#" class="text-center group">
+    <img src="./images/carousel3.png" alt=""
+      class="rounded-lg shadow-lg transition group-hover:scale-105 w-full h-48 object-cover" />
+    <div class="mt-2 text-pink-800 font-semibold">Slutty & Sundressed</div>
+  </a>
+
+  <a href="#" class="text-center group">
+    <img src="./images/carousel4.png" alt=""
+      class="rounded-lg shadow-lg transition group-hover:scale-105 w-full h-48 object-cover" />
+    <div class="mt-2 text-pink-800 font-semibold">Loose, Like My Morals</div>
+  </a>
+
+  <a href="#" class="text-center group">
+    <img src="./images/carousel2.png" alt=""
+      class="rounded-lg shadow-lg transition group-hover:scale-105 w-full h-48 object-cover" />
+    <div class="mt-2 text-pink-800 font-semibold">Eargasm Triggers</div>
+  </a>
+
+  <a href="#" class="text-center group">
+    <img src="./images/carousel1.png" alt=""
+      class="rounded-lg shadow-lg transition group-hover:scale-105 w-full h-48 object-cover" />
+    <div class="mt-2 text-pink-800 font-semibold">Slut Steppers</div>
+  </a>
+</div>
+
+</section>
+
+
+
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+
+<!-- 2nd lst section -->
+<section class="py-12 bg-black text-white">
+  <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <!-- Image -->
+    <div class="overflow-hidden rounded-xl shadow-lg">
+      <img 
+        src="./images/section.png" 
+        alt="Testimonial Image"
+        class="w-full h-72 object-cover"
+      />
+    </div>
+
+    <!-- Quote -->
+    <div class="flex flex-col gap-4">
+      <div class="text-pink-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M5.822 3.951c.431-.532 1.217-.578 1.73-.124l1.464 1.3c.512.455.553 1.237.124 1.77-.908 1.125-1.596 2.211-2.066 3.26-.563 1.296-.845 2.697-.845 4.203L4.315 12.04h5.183c.682 0 1.235.553 1.235 1.235v6.494c0 .682-.553 1.235-1.235 1.235H2.735A1.235 1.235 0 0 1 1.5 19.768v-4.027c0-2.385.375-4.56 1.126-6.526.671-1.71 1.736-3.464 3.196-5.264Z"/>
+        </svg>
+      </div>
+      <p class="text-lg leading-relaxed">
+We don’t do cute—we do filthy. Slip into slutty fits that scream “take me now”, tease in lace that barely counts as clothing, and walk like you own every sin. You're not just hot, babe—you’re fucking irresistible. Get in, get off, and leave 'em begging. No shame, just lust.      </p>
+      <div class="border-t border-gray-700 pt-4">
+        <p class="text-xl font-bold text-pink-500">Margo Von Teese</p>
+        <p class="text-sm text-gray-400">Chief Tease Officer • <span class="underline">whiipme.com</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+<div class="h-4"></div>
+
+<!-- last section -->
+<section class="grid grid-cols-1 gap-6 bg-[#FDE2E4] py-16 px-4 md:px-20 text-center">
+  <div class="flex flex-col gap-6">
+    <div class="text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#222]">Discover why pleasure-seekers love Whiip Me Daddy</h2>
+      <p class="text-lg text-gray-700 max-w-xl mx-auto pt-4">Ready to explore your wild side? From sweet to spicy, we've got the tools to make your fantasies reality. Try us risk-free.</p>
+    </div>
+
+    <div class="max-w-2xl mx-auto">
+      <form action="#" method="post" class="flex flex-col md:flex-row gap-4 items-center justify-center">
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          class="w-full md:w-auto flex-grow px-6 py-4 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500"
+          required
+        />
+        <button
+          type="submit"
+          class="px-6 py-4 rounded-2xl bg-pink-600 text-white font-semibold hover:bg-pink-700 transition-all">
+          Start the tease
+        </button>
+      </form>
+      <p class="text-sm text-gray-600 pt-4 max-w-md mx-auto">
+        No commitment. No credit card. Just 3 days of pure, unfiltered fun. By signing up, you're down for a little email action too.
+      </p>
+    </div>
+  </div>
+</section>
  
   <!-- Footer -->
  <footer class="bg-white dark:bg-gray-900 text-center text-gray-600 dark:text-gray-300 py-6 shadow mt-10">

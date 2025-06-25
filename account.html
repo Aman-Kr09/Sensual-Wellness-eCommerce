@@ -4,67 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Account - WhipMe Baby</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="whipmebaby.ico" type="image/x-icon">
 </head>
-<body class="bg-pink-50 min-h-screen font-sans">
+<body class="min-h-screen flex flex-col bg-pink-50">
 
-  <div class="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-xl rounded-xl">
-    <h1 class="text-3xl font-bold text-pink-700 mb-4">👤 My Account</h1>
+  <!-- Main Content Area -->
+  <main class="flex-1 flex justify-center items-start p-6">
+    <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-3xl">
+      <h1 class="text-3xl font-bold mb-4 flex items-center">
+        <img src="./images/section.png" alt="Profile" class="w-10 h-10 rounded-full mr-3" />
+        My Account
+      </h1>
+      
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">Profile Information</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+          <p><strong>Name:</strong> Margo Von Teese</p>
+          <p><strong>Email:</strong> margovon69@gmail.com</p>
+          <p><strong>Phone:</strong> +91 6969696969</p>
+          <p><strong>Address:</strong> 69 Pleasure Lane, BangTown</p>
+        </div>
+      </section>
 
-    <!-- Profile Info -->
-    <div class="mb-8">
-      <h2 class="text-xl font-semibold text-gray-700 mb-2">Profile Information</h2>
-      <div class="grid grid-cols-2 gap-4">
-        <div>
-          <p class="text-sm text-gray-500">Name</p>
-          <p class="font-medium">Rudra Verma</p>
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-2">🔒 Order History</h2>
+        <div class="bg-gray-100 rounded-md p-4 space-y-2 text-sm">
+          <div class="flex justify-between"><span>🔥 Glow Textured Vibrator</span><span class="text-green-600">Delivered</span></div>
+          <div class="flex justify-between"><span>💦 Whisper Clitoral Stimulator</span><span class="text-blue-600">Shipped</span></div>
+          <div class="flex justify-between"><span>🌙 Midnight Fantasy Set</span><span class="text-yellow-600">In Process</span></div>
         </div>
-        <div>
-          <p class="text-sm text-gray-500">Email</p>
-          <p class="font-medium">rudraverma69@gmail.com</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold mb-2">⚙️ Settings</h2>
+        <div class="space-x-2 mt-2">
+          <button class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">Edit Profile</button>
+          <button class="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">Change Password</button>
+          <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
         </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Sticky Footer -->
+  <footer class="bg-white dark:bg-gray-900 text-center text-gray-600 dark:text-gray-300 py-6 shadow">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <div>
-          <p class="text-sm text-gray-500">Phone</p>
-          <p class="font-medium">+91 9876543210</p>
+          <p class="text-sm">&copy; 2025 <span class="font-semibold">WhipMe Baby</span>. All rights reserved.</p>
         </div>
-        <div>
-          <p class="text-sm text-gray-500">Address</p>
-          <p class="font-medium">69 Pleasure Lane, BangTown</p>
+        <div class="flex space-x-4 text-sm">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms</a>
+          <a href="#" class="hover:underline">Contact</a>
+        </div>
+        <div class="flex space-x-4">
+          <!-- Social Icons -->
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 0 0 1.88-2.36 8.55 8.55 0 0 1-2.71 1.04 4.23 4.23 0 0 0-7.22 3.86A12.01 12.01 0 0 1 3.15 4.6a4.22 4.22 0 0 0 1.31 5.63 4.2 4.2 0 0 1-1.91-.53v.05a4.23 4.23 0 0 0 3.39 4.14 4.28 4.28 0 0 1-1.9.07 4.24 4.24 0 0 0 3.95 2.94A8.49 8.49 0 0 1 2 19.54a11.98 11.98 0 0 0 6.49 1.9c7.79 0 12.06-6.46 12.06-12.06 0-.18-.01-.35-.02-.53A8.6 8.6 0 0 0 24 4.56a8.49 8.49 0 0 1-2.54.7z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.4.5a4.8 4.8 0 0 1 1.7 1.1c.5.5.9 1.1 1.1 1.7.2.5.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.5 2.4a4.8 4.8 0 0 1-1.1 1.7c-.5.5-1.1.9-1.7 1.1-.5.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.4-.5a4.8 4.8 0 0 1-1.7-1.1 4.8 4.8 0 0 1-1.1-1.7c-.2-.5-.4-1.2-.5-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.5-2.4a4.8 4.8 0 0 1 1.1-1.7A4.8 4.8 0 0 1 5.6 2.8c.5-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.4 0-4.6.1-1 .1-1.5.2-1.9.4a3 3 0 0 0-1.1.7 3 3 0 0 0-.7 1.1c-.2.4-.3.9-.4 1.9-.1 1.2-.1 1.5-.1 4.6s0 3.4.1 4.6c.1 1 .2 1.5.4 1.9.2.4.5.8.7 1.1.3.3.7.5 1.1.7.4.2.9.3 1.9.4 1.2.1 1.5.1 4.6.1s3.4 0 4.6-.1c1-.1 1.5-.2 1.9-.4a3 3 0 0 0 1.1-.7 3 3 0 0 0 .7-1.1c.2-.4.3-.9.4-1.9.1-1.2.1-1.5.1-4.6s0-3.4-.1-4.6c-.1-1-.2-1.5-.4-1.9a3 3 0 0 0-.7-1.1 3 3 0 0 0-1.1-.7c-.4-.2-.9-.3-1.9-.4-1.2-.1-1.5-.1-4.6-.1zm0 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 1.8a3.7 3.7 0 1 0 0 7.4 3.7 3.7 0 0 0 0-7.4zm5.7-2.1a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-white">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.5 2 2 6.4 2 12s4.5 10 10 10 10-4.4 10-10S17.5 2 12 2zm4.5 7.6l-1.5 7.1c-.1.4-.3.5-.7.3l-2-1.5-1 1c-.1.1-.3.2-.5.2l.2-2.3 4.2-3.8c.2-.2-.1-.3-.4-.1L9 13.4 6.8 12.7c-.4-.1-.4-.4 0-.5l9.1-3.6c.4-.1.7.1.6.6z"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-
-    <!-- Order History -->
-    <div class="mb-8">
-      <h2 class="text-xl font-semibold text-gray-700 mb-2">🛍 Order History</h2>
-      <div class="bg-gray-100 p-4 rounded-lg">
-        <ul class="space-y-3">
-          <li class="flex justify-between text-sm">
-            <span>🔥 Glow Textured Vibrator</span>
-            <span class="text-gray-500">Delivered</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>💦 Whisper Clitoral Stimulator</span>
-            <span class="text-gray-500">Shipped</span>
-          </li>
-          <li class="flex justify-between text-sm">
-            <span>🎭 Midnight Fantasy Set</span>
-            <span class="text-gray-500">In Process</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Account Settings -->
-    <div>
-      <h2 class="text-xl font-semibold text-gray-700 mb-2">⚙️ Settings</h2>
-      <div class="flex space-x-4">
-        <button class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition">Edit Profile</button>
-        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition">Change Password</button>
-        <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Logout</button>
-      </div>
-    </div>
-  </div>
+  </footer>
 
 </body>
 </html>
