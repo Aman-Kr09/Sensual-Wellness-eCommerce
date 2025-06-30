@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up - Whip Me Baby</title>
+  <title>Login - Whip Me Baby</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="whipmebaby.ico" type="image/x-icon">
 </head>
@@ -11,29 +11,25 @@
 
   <main class="flex-grow flex items-center justify-center">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
-      <h2 class="text-2xl font-bold mb-6 text-center text-pink-600">Create an Account</h2>
+      <h2 class="text-2xl font-bold mb-6 text-center text-pink-600">Login to Your Account</h2>
 
-      <form id="registerForm" class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium">Full Name</label>
-          <input type="text" id="fullName" class="w-full p-2 border rounded" placeholder="Jane Doe" required />
-        </div>
+      <form id="loginForm" class="space-y-4">
         <div>
           <label class="block text-sm font-medium">Email</label>
-          <input type="email" id="email" class="w-full p-2 border rounded" placeholder="you@example.com" required />
+          <input type="email" id="loginEmail" class="w-full p-2 border rounded" placeholder="you@example.com" required />
         </div>
         <div>
           <label class="block text-sm font-medium">Password</label>
-          <input type="password" id="password" class="w-full p-2 border rounded" placeholder="••••••••" minlength="6" required />
+          <input type="password" id="loginPassword" class="w-full p-2 border rounded" placeholder="••••••••" required />
         </div>
         <button type="submit" class="w-full bg-pink-600 text-white font-semibold py-2 rounded hover:bg-pink-700">
-          Sign Up
+          Login
         </button>
       </form>
 
       <p class="text-center text-sm text-gray-600 mt-4">
-        Already have an account?
-        <a href="login.html" class="text-pink-500 hover:underline">Login</a>
+        Don't have an account?
+        <a href="register.html" class="text-pink-500 hover:underline">Sign Up</a>
       </p>
     </div>
   </main>
@@ -70,36 +66,27 @@
   </footer>
 
   <script>
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Get form values
-      const fullName = document.getElementById('fullName').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
       
-      // Simple validation
-      if (!fullName || !email || !password) {
-        alert('Please fill in all fields');
+      // Get user from localStorage
+      const user = JSON.parse(localStorage.getItem('user_' + email));
+      
+      if (!user) {
+        alert('User not found. Please register first.');
         return;
       }
       
-      if (password.length < 6) {
-        alert('Password must be at least 6 characters');
+      if (user.password !== password) {
+        alert('Incorrect password');
         return;
       }
       
-      // Store user data in localStorage (simulating database)
-      const user = {
-        fullName,
-        email,
-        password
-      };
-      
+      // Set current user and redirect
       localStorage.setItem('currentUser', JSON.stringify(user));
-      localStorage.setItem('user_' + email, JSON.stringify(user));
-      
-      // Redirect to account page
       window.location.href = 'account.html';
     });
   </script>

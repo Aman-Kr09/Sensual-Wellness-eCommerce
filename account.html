@@ -2,28 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Account - WhipMe Baby</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="whipmebaby.ico" type="image/x-icon">
 </head>
 <body class="min-h-screen flex flex-col bg-pink-50">
-
-  <!-- Main Content Area -->
   <main class="flex-1 flex justify-center items-start p-6">
     <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-3xl">
       <h1 class="text-3xl font-bold mb-4 flex items-center">
-        <img src="./images/section.png" alt="Profile" class="w-10 h-10 rounded-full mr-3" />
+        <img src="./images/section.png" alt="Profile" class="w-10 h-10 rounded-full mr-3"/>
         My Account
       </h1>
       
       <section class="mb-6">
         <h2 class="text-xl font-semibold mb-2">Profile Information</h2>
-        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
-          <p><strong>Name:</strong> Margo Von Teese</p>
-          <p><strong>Email:</strong> margovon69@gmail.com</p>
-          <p><strong>Phone:</strong> +91 6969696969</p>
-          <p><strong>Address:</strong> 69 Pleasure Lane, BangTown</p>
+        <div class="grid md:grid-cols-2 gap-4 text-gray-700" id="profileInfo">
+          <!-- JS will populate this -->
         </div>
       </section>
 
@@ -39,15 +34,14 @@
       <section>
         <h2 class="text-xl font-semibold mb-2">⚙️ Settings</h2>
         <div class="space-x-2 mt-2">
-          <button class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">Edit Profile</button>
-          <button class="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">Change Password</button>
-          <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
+          <button onclick="location.href='edit.html'" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600">Edit Profile</button>
+          <button id="logoutBtn" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- Sticky Footer -->
+  <!-- Footer -->
   <footer class="bg-white dark:bg-gray-900 text-center text-gray-600 dark:text-gray-300 py-6 shadow">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -81,5 +75,24 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      if (!currentUser) return window.location.href = 'register.html';
+
+      const profileInfo = document.getElementById('profileInfo');
+      profileInfo.innerHTML = `
+        <p><strong>Name:</strong> ${currentUser.fullName}</p>
+        <p><strong>Email:</strong> ${currentUser.email}</p>
+        <p><strong>Phone:</strong> ${currentUser.phone}</p>
+        <p><strong>Address:</strong> ${currentUser.address}</p>
+      `;
+
+      document.getElementById('logoutBtn').addEventListener('click', function () {
+        localStorage.removeItem('currentUser');
+        window.location.href = 'register.html';
+      });
+    });
+  </script>
 </body>
 </html>
