@@ -6,6 +6,10 @@
 
 ---
 
+**LIVE LINK**: https://sensual-wellness-e-commerce.vercel.app/
+
+---
+
 ## 🔥 Features
 
 - 🛍️ Sexy product cards with smooth hover effects  
